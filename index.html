@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title> YourWeather | Your own weather App</title>
+</head>
+
+<body class="bg-[url('./Images/weatherappbg.jpg')]">
+    <div>
+
+        <!--Location and Current Details-->
+
+        <div class="flex mt-4">
+            <!--Date and Time-->
+            <div class="flex ml-5 mt-3">
+                <h1 id="time" ; class="text-[4.5rem] text-zinc-200 font-extralight">
+                    10:30
+                </h1>
+                <h2 id="am_pm" ; class="font-normal text-zinc-200 text-xl
+                mt-16 ml-2">
+                    PM
+                </h2>
+            </div>
+            <!--TimeZone Details-->
+            <div class="fixed right-0 mt-4 mr-5 ">
+                <h1 id="timezone_location" ; class="text-zinc-200 font-light text-2xl text-end">Asia/Singapore</h1>
+                <h1 id="timezone_coord" ; class="text-zinc-200 font-semibold w-32 mt-2 ml-10 text-end">1.09845456456 E,
+                    10.90834342 N</h1>
+            </div>
+        </div>
+        <div class="ml-5 ">
+            <h1 id="day_date" ; class="text-zinc-200 font-light text-2xl"> Sunday , 11 September </h1>
+        </div>
+
+        <!--Today's Weather Details -->
+
+        <div>
+            <div id="current_weather_details" ; class="w-72 h-44
+            bg-slate-800/70 rounded-2xl
+            ml-5 mt-5 flex
+            outline outline-1 outline-zinc-200">
+                <div class="w-2/3 ml-4 mt-1 ">
+
+                    <h1 class="text-zinc-200 font-light text-xl my-1">Humidity</h1>
+                    <h1 class="text-zinc-200 font-light text-xl my-1">Pressure</h1>
+                    <h1 class="text-zinc-200 font-light text-xl my-1">Wind Speed</h1>
+                    <h1 class="text-zinc-200 font-light text-xl my-1">Sunrise</h1>
+                    <h1 class="text-zinc-200 font-light text-xl my-1">Sunset</h1>
+
+                </div>
+                <div class="mt-1">
+                    <h1 class="text-zinc-200 font-light text-xl my-1">:</h1>
+                    <h1 class="text-zinc-200 font-light text-xl my-1">:</h1>
+                    <h1 class="text-zinc-200 font-light text-xl my-1">:</h1>
+                    <h1 class="text-zinc-200 font-light text-xl my-1">:</h1>
+                    <h1 class="text-zinc-200 font-light text-xl my-1">:</h1>
+                </div>
+                <div class="w-1/3  ml-2 mt-1">
+
+                    <h1 id="current_humidity" ; class="text-zinc-200 font-light text-xl my-1">10%</h1>
+                    <h1 id="current_pressure" ; class="text-zinc-200 font-light text-xl my-1">10.1</h1>
+                    <h1 id="current_windspeed" ; class="text-zinc-200 font-light text-xl my-1">1001</h1>
+                    <h1 id="current_sunrise" ; class="text-zinc-200 font-light text-xl my-1">5:30</h1>
+                    <h1 id="current_sunset" ; class="text-zinc-200 font-light text-xl my-1">17:30</h1>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!--Future Weather-->
+        <div id="coming_forecast";
+        class="h-68
+        py-2
+        px-6 
+        flex gap-3   
+        fixed bottom-0 inset-x-0
+        justify-start
+        bg-slate-800/50 
+        no-scrollbar
+        overflow-x-auto">
+        </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="./main.js"></script>
+
+</body>
+
+</html>
